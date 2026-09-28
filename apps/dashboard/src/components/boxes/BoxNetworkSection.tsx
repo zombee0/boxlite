@@ -29,8 +29,6 @@ export function BoxNetworkSection({ box, canManage }: { box: Box; canManage: boo
       togglePublic.mutate(
         { boxId: box.id, isPublic: next },
         {
-          // Named for what actually changed: preview reachability, not the
-          // box as a whole.
           onSuccess: () => toast.success(next ? 'Public access enabled' : 'Preview URLs require signing in'),
           onError: () => toast.error('Could not change preview access'),
         },

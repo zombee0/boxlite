@@ -98,7 +98,7 @@ export function BoxPreviewUrlDialog({
 
             {/* Show the box's access setting beside the URL being copied. */}
             <p className="text-[11px] uppercase tracking-[1px] text-muted-foreground">
-              {isPublic ? 'public box' : 'only your organization can open it'}
+              {isPublic ? 'anyone can open it while this port has a public tunnel' : 'only your organization can open it'}
             </p>
 
             {/* Stated here because it cannot be diagnosed afterwards: the URL

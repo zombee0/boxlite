@@ -132,8 +132,9 @@ export function BoxNetworkPanel({
           <AlertDialogHeader>
             <AlertDialogTitle>Enable public access?</AlertDialogTitle>
             <AlertDialogDescription>
-              Public access may allow preview URLs to open without signing in. A URL is not a secret — it ends up in
-              browser history, proxy logs and Referer headers.
+              Ports opened with a public tunnel become reachable at their preview URLs without signing in. Preview URLs
+              for other ports stop working until a tunnel opens them. A URL is not a secret — it ends up in browser
+              history, proxy logs and Referer headers.
               <br />
               <br />
               The web terminal and the box&apos;s files, commands and settings are not affected; those still require
@@ -151,7 +152,7 @@ export function BoxNetworkPanel({
                 setConfirmingPublic(false)
               }}
             >
-              Open to anyone
+              Enable public access
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
